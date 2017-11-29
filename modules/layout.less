@@ -4,7 +4,10 @@
 
 // Import grid floatbased.
 @import url(grid.less);
+
 @import url(grid-helpers.less);
+
+@import url(typo/typography.less);
 
 @magicNumber: 24px;
 
@@ -88,13 +91,13 @@ a:active {
 .row {
     .row();
 }
-
+/*
 .outer-wrap-header,
 .outer-wrap-main,
 .footer-column-wrapper {
     margin-bottom: @magicNumber;
 }
-
+*/
 .footer-column-wrapper {
     .clearfix();
 }
@@ -115,13 +118,10 @@ a:active {
 }
 
 // Navbar Main
-
 @navbarItemBgColor: #ddd;
 
 // Navbar max
-
 @maxButtonFontSize: 2em;
-
 
 
 .site-logo-text {
@@ -131,12 +131,7 @@ a:active {
 .navbar2 {
     .column(@columns - (@columns / 4));
 }
-/*
-.main {
-    .column(@columns - (@columns / 6));
-    .push(@columns / 12);
-}
-*/
+
 .main {
      .column(@columns * 3 / 4 - 2);
      .push(2);
@@ -161,21 +156,7 @@ a:active {
 .sidebar-left {
      .column(@columns / 4 + 1);
 }
-/*
-.sidebar-right {
-     .push(1);
-}
-*/
-/*
-.sidebar {
-    .column(3);
-}
 
-.outer-wrap-main .has-sidebar {
-    .column(@columns - (@columns / 6) - 4);
-    .push((@columns / 12) + 3);
-}
-*/
 .site-footer {
     .column(@columns);
     text-align: center;
