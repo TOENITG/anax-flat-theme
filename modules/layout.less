@@ -23,25 +23,6 @@ a {
     text-decoration: none;
 }
 
-a:link {
-    color: #336;
-}
-
-/* visited link */
-a:visited {
-    color: #363;
-}
-
-/* mouse over link */
-a:hover {
-    color: #633;
-}
-
-/* selected link */
-a:active {
-    color: #633;
-}
-
 /**
 * Gridbased layout details
 */
@@ -77,13 +58,7 @@ a:active {
     }
 }
 
-.inner-wrap-header {
-    background-color: white;
-}
-
 .outer-wrap-footer {
-    background-color: #333;
-    color: white;
     padding-top: 16px;
     padding-bottom: 16px;
 }
@@ -132,6 +107,40 @@ a:active {
     .column(@columns - (@columns / 4));
 }
 
+.footer-column {
+    ul {
+        margin: 0;
+        list-style-type: circle;
+    }
+}
+
+.next-previous {
+    .next,
+    .previous {
+        width: 50%;
+    }
+
+    .next {
+        float: right;
+        text-align: right;
+    }
+}
+
+.breadcrumb {
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    li {
+        display: inline;
+        &::after {
+            content: " » ";
+        }
+    }
+}
+
 .main {
      .column(@columns * 3 / 4 - 2);
      .push(2);
@@ -162,18 +171,11 @@ a:active {
     text-align: center;
     a {
         text-decoration: none;
-        color: #ccc;
     }
 }
 
 .footer-column {
     .column(@columns / 3);
-
-}
-
-.footer-column-wrapper {
-    background-color: #777;
-//    border: 1px groove #111;
 }
 
 
